@@ -28,6 +28,7 @@ all_combinations = all_combinations.merge(sentiment,'left',['business_date','tic
 
 all_combinations['weekday'] = pd.to_datetime(all_combinations.business_date).dt.weekday
 all_combinations['month'] = pd.to_datetime(all_combinations.business_date).dt.month
+```
 
 Здесь all_combinations – это просто все наши признаки, которые мы собрали ранее по тех индикаторам и сентиментам.
 
@@ -64,6 +65,7 @@ all_combinations['month'] = pd.to_datetime(all_combinations.business_date).dt.mo
 Если перенести все графики на plotly, то получится выполнить задание из бонусной части про интерактивные графики.
 
 
+```
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import mean_squared_error, mean_absolute_percentage_error
 import matplotlib.pyplot as plt
@@ -233,6 +235,7 @@ def plot_all_graphs(
         plt.tight_layout()
         plt.show()
 
+```
 
 ## 5. Инференс с использованием ранее обученной модели – 1 балл
 
